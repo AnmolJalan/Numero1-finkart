@@ -1,0 +1,55 @@
+<app-navbar></app-navbar>
+
+    <main class="container">
+
+      <!-- Left Column / Headphones Image -->
+      
+	  <div class="left-column">
+        <img data-image="red" class="active" src="assets\images\p3.jpg" alt="">
+      </div>
+
+
+      <!-- Right Column -->
+      <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+          <h1 style="color:orange;">{{this.product.productName}} </h1>
+          <p style= "color:gray;"><i> 
+      <h3>Features:  </h3>
+	  <h4>
+	  <ul style= "color:gray;">
+	  <li>Resolution: 4K Ultra HD (3840x2160) | Refresh Rate: 50 hertz</li>
+	  <li>Connectivity : 3 HDMI ports  | 3 USB ports</li>
+      <li>Sound : 20 Watts Output | Bass reflex speaker</li>
+      <li>Smart TV Features</li>
+      <li>Display : 4K HDR | 4K X-Reality Pro | Slice of Living Design | Triluminous</li>
+      <li>Smart Plug & Play</li>
+      <li>Warranty Information: 1 year warranty provided by Sony from date of purchase</li>
+	  </ul>
+	  </h4>
+	  </i>
+	  </p>
+        </div>
+
+        <label for="EMI" style="color:blue;">Choose a EMI option:</label>
+		<select name="months" id="months" (change)="changeMonths($event)" style="width:20%;">
+		<option value="3">3</option>
+		<option value="6">6</option>
+		<option value="9">9</option>
+		</select> 
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+			
+		<div class="product-price">
+          <span>₹ {{this.product.productRate}}</span>
+                <!-- <a href="http://localhost:4200/dashboard" (click)='onPurchase()' class="cart-btn">Buy Now</a> -->
+                <a (click)='onPurchase()' class="cart-btn">Buy Now</a>
+        </div>
+      </div>
+  
+	</main>
+  

@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+
+  <body>
+    <main class="container">
+
+      <!-- Left Column / Headphones Image -->
+      
+	  <div class="left-column">
+        <img data-image="red" class="active" src="assets\images\p4.jpg" alt="">
+      </div>
+
+
+      <!-- Right Column -->
+      <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+          <h1 style="color:orange;">{{this.product.productName}} </h1>
+          <p style= "color:gray;"><i> 
+      <h3>Features:  </h3>
+	  <h4>
+	  <ul style= "color:gray;">
+	  <li>Noise Cancelling : Wireless Noise Cancellation Headphones with Noise Cancellation Optimizer</li>
+	  <li>Extra Bass : Wireless Extra Bass Headphones for Bass Music</li>
+      <li>Quick attention mode</li>
+      <li>Touch controls</li>
+      <li>Smart listening</li>
+      <li>Long battery life</li>
+      <li>Quick charging : Quick charge for 10min charge for 60 min play back</li>
+	  </ul>
+	  </h4>
+	  </i>
+	  </p>
+        </div>
+
+        <label for="EMI" style="color:blue;">Choose a EMI option:</label>
+		<select name="months" id="months" (change)="changeMonths($event)" style="width:20%;">
+		<option value="3">3</option>
+		<option value="6">6</option>
+		<option value="9">9</option>
+		</select> 
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+			
+		<div class="product-price">
+          <span>₹ {{this.product.productRate}}</span>
+                  <!-- <a href="http://localhost:4200/dashboard" (click)='onPurchase()' class="cart-btn">Buy Now</a> -->
+        <a (click)='onPurchase()' class="cart-btn">Buy Now</a>
+        </div>
+      </div>
+  
+	</main>
+ 

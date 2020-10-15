@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+
+  <body>
+    <main class="container">
+
+  
+      
+	  <div class="left-column">
+        <img data-image="red" class="active" src="assets\images\p6.jpg" alt="">
+      </div>
+
+
+ 
+      <div class="right-column">
+
+        <div class="product-description">
+          <h1 style="color:orange;">{{this.product.productName}} </h1>
+          <p style= "color:gray;"><i> 
+      <h3>Features:  </h3>
+	  <h4>
+	  <ul style= "color:gray;">
+	  <li>Sensor: APS-C CMOS Sensor with 24.1 MP (high resolution for large prints and image cropping)</li>
+	  <li>ISO: 100-6400 sensitivity range</li>
+      <li>Image Processor: DIGIC 4+ with 9 autofocus points</li>
+      <li>Video Resolution: Full HD video with fully manual control and selectable frame rates</li>
+      <li>Connectivity: WiFi, NFC and Bluetooth built-in</li>
+      <li>Lens Mount: EF-S mount compatible with all EF and EF-S lenses</li>
+	  </ul>
+	  </h4>
+	  </i>
+	  </p>
+        </div>
+
+        <label for="EMI" style="color:blue;">Choose a EMI option:</label>
+		<select name="months" id="months" (change)="changeMonths($event)" style="width:20%;">
+		<option value="3">3</option>
+		<option value="6">6</option>
+		<option value="9">9</option>
+		</select> 
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+			
+		<div class="product-price">
+          <span>₹ {{this.product.productRate}}</span>
+                 <!-- <a href="http://localhost:4200/dashboard" (click)='onPurchase()' class="cart-btn">Buy Now</a> -->
+        <a (click)='onPurchase()' class="cart-btn">Buy Now</a>
+        </div>
+      </div>
+  
+	</main>
+ 
+
+
